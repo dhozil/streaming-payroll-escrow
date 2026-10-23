@@ -60,6 +60,14 @@ def test_create_stream_validates(direct_vm, direct_deploy):
     with direct_vm.expect_revert("Total must equal amount_per_milestone * milestone_count"):
         contract.create_stream(employer=str(employer), employee=str(employee),
                                 total_amount=100, amount_per_milestone=30, milestone_count=2)
+    with direct_vm.expect_revert("Escrow funding must equal the stream total"):
+        direct_vm.value = 50
+        contract.create_stream(employer=str(employer), employee=str(employee),
+                                total_amount=100, amount_per_milestone=50, milestone_count=2)
+    with direct_vm.expect_revert("Escrow funding must equal the stream total"):
+        direct_vm.value = 150
+        contract.create_stream(employer=str(employer), employee=str(employee),
+                                total_amount=100, amount_per_milestone=50, milestone_count=2)
 
     vid = _create(contract, direct_vm, employer, employee, total=100, per=50, count=2)
     s = contract.get_stream(vid)

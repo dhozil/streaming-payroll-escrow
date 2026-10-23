@@ -9,7 +9,7 @@
 ![Status](https://img.shields.io/badge/status-live%20on%20studionet-2ea44f)
 ![Tests](https://img.shields.io/badge/tests-6%20passed-2ea44f)
 
-[Live Contract](https://explorer-studio.genlayer.com/address/0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8) 
+[Live Contract](https://explorer-studio.genlayer.com/address/0x3326f171a7E249F3D3ac75Cabd28cC25F5FaD991) 
 
 [GenLayer Docs](https://docs.genlayer.com)
 
@@ -25,8 +25,8 @@ Milestone payments usually die in review: either the human reviewer (the employe
 
 | | |
 |---|---|
-| **Contract** | [StreamingPayrollEscrow](https://explorer-studio.genlayer.com/address/0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8) |
-| **Address** | `0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8` |
+| **Contract** | [StreamingPayrollEscrow](https://explorer-studio.genlayer.com/address/0x3326f171a7E249F3D3ac75Cabd28cC25F5FaD991) |
+| **Address** | `0x3326f171a7E249F3D3ac75Cabd28cC25F5FaD991` |
 | **Network** | GenLayer studionet (chain `61999`) |
 | **Status** | Deployed + verified on-chain |
 
@@ -79,4 +79,4 @@ genvm-lint check contracts/streaming_payroll_escrow.py
 ## Live Deployment
 
 Deployed on GenLayer studionet (chain `61999`):
-[`0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8`](https://explorer-studio.genlayer.com/address/0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8)
+[`0x3326f171a7E249F3D3ac75Cabd28cC25F5FaD991`](https://explorer-studio.genlayer.com/address/0x3326f171a7E249F3D3ac75Cabd28cC25F5FaD991)

@@ -38,6 +38,11 @@ Milestone billing for contractors, streaming salaries for DAO/team payroll, escr
 Deployed on GenLayer studionet (chain `61999`):
 [`0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8`](https://explorer-studio.genlayer.com/address/0xEa03F4FeaD3BE16Ba8091Eac1290254d29bF54d8)
 
+## Steward Request Response
+**Request**: Please submit matching source and deployment that enforce the escrow funding invariant at creation: the actual payable value must equal the stream's recorded total (and therefore amount per milestone times milestone count), so an underfunded stream cannot draw on another stream's balance and an overpayment cannot be stranded. Please include tests showing underpayment and overpayment revert, while exact funding supports all milestone payouts and cancellation refunds the precise unreleased remainder.
+
+**Fix**: `create_stream` now reverts unless `msg.value == total_amount` at creation. Underpayment/overpayment tests added; exact funding supports milestone payouts and cancellation refunds the unreleased remainder.
+
 ## Source Code
 See `contracts/streaming_payroll_escrow.py`
 

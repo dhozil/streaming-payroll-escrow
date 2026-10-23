@@ -158,6 +158,8 @@ class StreamingPayrollEscrow(gl.Contract):
             raise gl.vm.UserError("Milestone count must be at least 1")
         if int(total_amount) != int(amount_per_milestone) * int(milestone_count):
             raise gl.vm.UserError("Total must equal amount_per_milestone * milestone_count")
+        if int(gl.message.value) != int(total_amount):
+            raise gl.vm.UserError("Escrow funding must equal the stream total")
         if int(self.next_stream_id) >= MAX_STREAMS:
             raise gl.vm.UserError("Stream limit reached")
 
